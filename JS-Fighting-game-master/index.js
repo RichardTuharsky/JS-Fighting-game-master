@@ -153,7 +153,7 @@ function animate() {
         ){
          player.isAttacking = false
          enemy.health -= 8
-         document.querySelector('#enemyHealth').style.width = enemy.health + '%' //treba dorobit + %, 11/6 aktualne nefunguje
+         document.querySelector('#enemyHealth').style.width = enemy.health + '%' 
     }
     if(
       rectanfularCollision ({
@@ -163,7 +163,8 @@ function animate() {
        enemy.isAttacking
       ){
        enemy.isAttacking = false
-       console.log('enemy attact successful')
+       player.health -= 8
+       document.querySelector('#playerHealth').style.width = player.health + '%' //treba dokoncit aby uberalo z lava nie z prava
   }
 }
 
