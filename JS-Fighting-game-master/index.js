@@ -153,7 +153,7 @@ function animate() {
         ){
          player.isAttacking = false
          enemy.health -= 8
-         document.querySelector('#enemyHealth').style.width = enemy.health //treba dorobit + %, 11/6 aktualne nefunguje
+         document.querySelector('#enemyHealth').style.width = enemy.health + '%' //treba dorobit + %, 11/6 aktualne nefunguje
     }
     if(
       rectanfularCollision ({
