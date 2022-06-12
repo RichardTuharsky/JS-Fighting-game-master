@@ -1,8 +1,14 @@
 class Sprite {
-    constructor({position}) {
+    constructor({position, imageSrc}) {
         this.position = position
+        this.width = 50
+        this.height = 150
+        this.image = new Image()
+        this.image.src = imageSrc
     }
     draw() {
+      c.drawImage(this.image, this.position.x, this.position.y)
+
     }
     update() {
         this.draw()
@@ -34,7 +40,6 @@ class Fighter {
       c.fillStyle = this.color
       c.fillRect(this.position.x,this.position.y, this.width, this.height)
 
-      /*attack box*/
       if (this.isAttacking){
         c.fillStyle = 'green'
         c.fillRect(this.attackBox.position.x, this.attackBox.position.y, this.attackBox.width,this.attackBox.height)
@@ -60,4 +65,3 @@ class Fighter {
     }, 100)
   }
 }
-
